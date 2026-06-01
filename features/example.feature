@@ -1,4 +1,5 @@
 Feature: Example
+    Add any comments or specifications here
 
     Scenario: Run Index
         When Index() is called
