@@ -4,7 +4,7 @@ import { When, Then } from "@cucumber/cucumber";
 import Index from "../../app/index.tsx";
 
 
-When('Index() is called', function () {
+When('Index is called', function () {
     // Write code here that turns the phrase above into concrete actions
     return 'pending';
 });
