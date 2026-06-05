@@ -1,6 +1,6 @@
 Feature: Example
     Add any comments or specifications here
 
-    Scenario: Run Index
-        When Index is called
-        Then I should receive a View with text that says "Edit app/index.tsx to edit this screen."
+    Scenario: Emergency stop button pressed
+        When the emergency stop button is pressed
+        Then the chair is notified via the sendToChair function

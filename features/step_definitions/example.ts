@@ -1,15 +1,14 @@
 import assert from "assert";
 
 import { When, Then } from "@cucumber/cucumber";
-import Index from "../../app/index.tsx";
 
-
-When('Index is called', function () {
-    // Write code here that turns the phrase above into concrete actions
+When('the emergency stop button is pressed', function () {
+// Write code here that turns the phrase above into concrete actions
     return 'pending';
 });
 
-Then('I should receive a View with text that says {string}', function (string) {
-    // Write code here that turns the phrase above into concrete actions
+
+Then('the chair is notified via the sendToChair function', function () {
+// Write code here that turns the phrase above into concrete actions
     return 'pending';
 });
