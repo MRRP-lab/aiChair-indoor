@@ -1,6 +1,5 @@
 module.exports = {
   preset: 'jest-expo',
-  testMatch: ['**/__tests__/step-definitions/**/*.steps.ts?(x)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   transformIgnorePatterns: [
     'node_modules/(?!(' + [
