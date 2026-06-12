@@ -1,8 +1,10 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "esModuleInterop": true,
     "strict": true,
-    "types": ["jest"],
+    "allowImportingTsExtensions": true,
+    "types": ["node", "jest"],
     "paths": {
       "@/*": [
         "./*"
@@ -14,6 +16,7 @@
     "**/*.tsx",
     "../.expo/types/**/*.ts",
     "expo-env.d.ts",
-    ".expo/types/**/*.ts"
+    ".expo/types/**/*.ts",
+    "features/**/*.ts"
   ]
 }
