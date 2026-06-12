@@ -1,5 +1,6 @@
 Feature: Guide Following
 
-    Scenario: User wants to end the guide Following
-        Given the user presses the "stop following" button
-        Then the app should stop sending movement commands to the wheelchair
+    Scenario: The user ends guide following
+        Given the app is on guide following mode
+        When the user presses the "stop following" button
+        Then the app should tell the chair to stop moving

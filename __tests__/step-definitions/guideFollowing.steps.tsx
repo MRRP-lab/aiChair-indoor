@@ -1,29 +1,26 @@
 import { defineFeature, loadFeature } from 'jest-cucumber';
 import { render, screen, fireEvent } from '@testing-library/react-native';
-import { Pressable, Text } from 'react-native';
+import GuideFollow from '../../app/guide-follow';
 
 const feature = loadFeature('__tests__/features/guideFollowing.feature');
 
 defineFeature(feature, (test) => {
+    test('The user ends guide following', ({ given, when, then }) => {
+        const sendToChair = jest.fn();
 
-    const stopFollowingButton = jest.fn()
-    const chairIsMoving = jest.fn(() => false)
-
-
-    test('User wants to end the guide Following', ({ given, then }) => {
-        given('the user presses the "stop following" button', () => {
+        given('the app is on guide following mode', () => {
             render(
-                <Pressable onPress={stopFollowingButton}>
-                    <Text>Stop Following</Text>
-                </Pressable>
+                <GuideFollow sendToChair={sendToChair} />
             );
+        });
+
+        when('the user presses the "stop following" button', () => {
             fireEvent.press(screen.getByText(/Stop Following/i));
         });
 
-        then('the app should stop sending movement commands to the wheelchair', () => {
-            expect(chairIsMoving()).toBe(false);
-
-            expect(stopFollowingButton).toHaveBeenCalledTimes(1);
+        then('the app should tell the chair to stop moving', () => {
+            expect(sendToChair).toHaveBeenCalledTimes(1);
+            expect(sendToChair).toHaveBeenCalledWith('end-guide-follow');
         });
     });
 });
