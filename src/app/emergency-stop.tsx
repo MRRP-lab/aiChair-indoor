@@ -1,11 +1,13 @@
-import React from 'react';
-import { Button } from 'react-native';
+import React from "react";
+import { Button } from "react-native";
 
-export default function EmergencyStop(
-    { sendToChair }: { sendToChair: (message: string) => void }
-) {
+export default function EmergencyStop({
+  sendToChair,
+}: {
+  sendToChair: (message: string) => void;
+}) {
   const handleEmergencyStop = () => {
-    sendToChair('emergency-stop');
+    sendToChair("emergency-stop");
   };
 
   return (
