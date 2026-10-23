@@ -1,10 +1,13 @@
 # MRRP AI Chair App
 
 ## Installation
+
 `npm install`
 
 ## Building
-*TBD*
+
+_TBD_
 
 ## Testing
+
 `npm test`
