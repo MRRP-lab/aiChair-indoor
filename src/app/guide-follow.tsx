@@ -1,6 +1,7 @@
-export default function GuideFollow({ sendToChair }: { sendToChair: (message: string) => void }) {
-  return (
-    <>
-    </>
-  );
+export default function GuideFollow({
+  sendToChair,
+}: {
+  sendToChair: (message: string) => void;
+}) {
+  return <></>;
 }
