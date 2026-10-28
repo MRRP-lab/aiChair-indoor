@@ -11,8 +11,7 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "format": "prettier . --write",
-    "prebuild": "expo prebuild",
-    "build-apk": "react-native build-android --mode=release"
+    "build:apk": "eas build --platform android -e development"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
@@ -51,6 +50,7 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^25.9.1",
     "@types/react": "~19.2.6",
+    "eas-cli": "^26.0.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",
     "eslint-config-prettier": "^10.1.8",
