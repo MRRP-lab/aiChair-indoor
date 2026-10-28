@@ -27,8 +27,11 @@
     "react": "~19.3.1",
     "react-native": "0.88.0",
     "react-native-ble-plx": "3.5.1",
+    "react-native-nitro-image": "^0.15.2",
+    "react-native-nitro-modules": "^0.37.1",
     "react-native-safe-area-context": "~5.10.1",
-    "react-native-screens": "~4.30.0"
+    "react-native-screens": "~4.30.0",
+    "react-native-vision-camera": "^5.2.3"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
