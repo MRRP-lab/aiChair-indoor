@@ -4,15 +4,21 @@ import { useState } from "react";
 import { connect } from "./connection";
 import useScanDevices from "./hooks/use-scan-devices";
 import useUpdateConnection from "./hooks/use-update-connection";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { type MainStackParamList } from "../app/main-navigation-stack";
 
 export default function Scanning() {
   const [failedToConnect, setFailedToConnect] = useState(false);
   const devices = useScanDevices();
   const setConnection = useUpdateConnection();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
 
   const handleConnectBletooth = (device: Device) => () => {
     connect(device)
       .then(setConnection)
+      .then(() => navigation.navigate("connected"))
       .catch(() => setFailedToConnect(true));
   };
 
