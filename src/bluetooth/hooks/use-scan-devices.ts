@@ -1,6 +1,6 @@
 import { Result, Ok, Err } from "@trylonai/ts-result";
 import { useContext, useEffect, useState } from "react";
-import { Device, BleError, BleManager } from "react-native-ble-plx";
+import { Device, BleError } from "react-native-ble-plx";
 import { SERVICE_UUID } from "../uuids";
 import connectionManagerContext from "../contexts/connection-manager-context";
 
@@ -24,7 +24,11 @@ export default function useScanDevices(): Result<Device[], BleError | null> {
           setScanResult(Err(err));
         } else if (device) {
           setScanResult((result) =>
-            result.map((devices) => [...devices, device]),
+            result.map((devices) =>
+              devices.map((d) => d.id).includes(device.id)
+                ? devices
+                : [...devices, device],
+            ),
           );
         }
       })
