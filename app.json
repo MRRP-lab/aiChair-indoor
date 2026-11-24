@@ -54,12 +54,16 @@
       [
         "react-native-ble-plx",
         {
-        "isBackgroundEnabled": false,
-        "modes": ["central"],
-        "bluetoothAlwaysPermission": "Allow $(PRODUCT_NAME) to connect to Bluetooth devices"
+          "isBackgroundEnabled": false,
+          "modes": [
+            "central"
+          ],
+          "bluetoothAlwaysPermission": "Allow $(PRODUCT_NAME) to connect to Bluetooth devices"
         }
-    ],
-      "expo-font"
+      ],
+      "expo-font",
+      "react-native-fast-tflite",
+      "react-native-blob-util"
     ],
     "experiments": {
       "typedRoutes": true,

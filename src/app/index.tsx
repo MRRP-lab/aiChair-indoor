@@ -6,8 +6,5 @@ import { useState } from "react";
 import CameraTracker from "./camera-tracker";
 
 export default function Index() {
-
-  return (
-    <CameraTracker></CameraTracker>
-  );
+  return CameraTracker()
 }
