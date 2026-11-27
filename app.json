@@ -62,7 +62,15 @@
         }
       ],
       "expo-font",
-      "react-native-blob-util"
+      "react-native-blob-util",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
