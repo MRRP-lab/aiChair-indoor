@@ -62,7 +62,6 @@
         }
       ],
       "expo-font",
-      "react-native-fast-tflite",
       "react-native-blob-util"
     ],
     "experiments": {

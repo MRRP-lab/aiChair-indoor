@@ -10,11 +10,12 @@ ENV GRADLE_USER_HOME=/app/.gradle
 # Install EAS CLI globally
 RUN npm install -g eas-cli
 
-# Copy package management files first to leverage Docker layer caching
-COPY package*.json ./
+# # The build files mount (-v "$(pwd):/app"), so we don't need to copy anything. This solution is easier for development. 
+# # Copy package management files first to leverage Docker layer caching
+# COPY package*.json ./
 
-# Install project dependencies
-RUN npm ci
+# # Install project dependencies
+# RUN npm ci
 
 # Copy the rest of your application code
 COPY . .

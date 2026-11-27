@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 
-export default function ModelLoadingScreen(progress: number) {
+export default function ModelLoadingScreen({ progress }: { progress: number }) {
     return (
         <View>
             <Text>

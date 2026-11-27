@@ -12,9 +12,9 @@ export default function CameraTracker() {
 
   const detector = useObjectDetector(models.objectDetection.YOLO26.NANO.DEFAULT);
   if (!detector.isReady) {
-    return ModelLoadingScreen(detector.downloadProgress);
+    return <ModelLoadingScreen progress={detector.downloadProgress}/>;
   } else {
-    return GuideTrackingScreen(detector);
+    return <GuideTrackingScreen detector={detector}/>;
   }
 
 
