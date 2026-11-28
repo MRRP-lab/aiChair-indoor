@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-native";
-import { useConnection } from "../bluetooth";
+import { useConnection } from "../../bluetooth";
 
 export default function EmergencyStop() {
   const connection = useConnection();

@@ -1,6 +1,6 @@
 import { defineFeature, loadFeature } from "jest-cucumber";
 import { render, screen, fireEvent } from "@testing-library/react-native";
-import GuideFollow from "../../src/app/guide-follow";
+import GuideFollow from "../../src/app/(tabs)/guide-follow";
 
 const feature = loadFeature("__tests__/features/guideFollowing.feature");
 

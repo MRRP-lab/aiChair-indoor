@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   ConnectionContext,
   ConnectionManagerContext,
-} from "../bluetooth/";
+} from "../../bluetooth";
 import EmergencyStop from "./emergency-stop";
 import { useContext } from "react";
 

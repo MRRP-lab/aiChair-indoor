@@ -14,6 +14,7 @@
 4. Connect to phone (need to enable developer mode, pair via usb or wireless)
 5. `adb pair <ip>:<port>`
 6. `adb install -r app.apk`
+7. `npx expo start --dev-client --tunnel -c`
 
 ## Testing
 

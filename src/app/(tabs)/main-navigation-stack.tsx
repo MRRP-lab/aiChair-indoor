@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Scanning } from "../bluetooth/";
+import { Scanning } from "../../bluetooth";
 import ConnectedStack from "./connected-stack";
 
 export default function MainNavigationStack() {

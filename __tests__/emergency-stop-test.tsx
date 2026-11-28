@@ -1,6 +1,6 @@
 import { render, screen, userEvent } from "@testing-library/react-native";
 
-import EmergencyStop from "../src/app/emergency-stop";
+import EmergencyStop from "../src/app/(tabs)/emergency-stop";
 
 describe("EmergencyStop", () => {
   it('renders a button named "Emergency Stop"', () => {
